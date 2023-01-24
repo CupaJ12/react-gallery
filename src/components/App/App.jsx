@@ -41,7 +41,9 @@ function App() {
         </header>
         <GalleryList
         galleryListProp={galleryItems}
+        getGallery={getGallery}
         />
+        
       </div>
     );
 }

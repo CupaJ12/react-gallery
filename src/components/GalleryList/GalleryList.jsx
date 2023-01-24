@@ -1,20 +1,29 @@
-// import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({galleryListProp}) {
+function GalleryList({galleryListProp, getGallery}) {
     return (
         
         <>
             {galleryListProp.map(goatpicObject =>
             (
-                <div className='goatPicObject' key={goatpicObject.id}>
-                   < img src={goatpicObject.path} />
-                </div>
+
+                <GalleryItem goatpicObject={goatpicObject} getGallery={getGallery}
+                />
+                // <div className='goatPicObject' key={goatpicObject.id}>
+                //    < img src={goatpicObject.path} />
+                //    <br/>
+                //    <button>Like</button>
+                //    <p>{goatpicObject.likes}</p>
+                // </div>
             )
             )}
+
 
         </>
     )
 }
+
+
                 // <GalleryItem 
                 // key={GalleryItem.id}
                 // path={GalleryList.path}
